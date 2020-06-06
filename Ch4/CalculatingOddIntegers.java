@@ -9,30 +9,16 @@
 //imports
 import acm.program.*;
 
-
-public class CalculatingOddIntegers extends ConsoleProgram {
-	
-	// This is the initial value in the for loop
-	private static final int ODD = 1;
-	
-	public void run () {
+public class AddOddIntegers extends ConsoleProgram{
+	public void run(){
+		int n = readInt("Enter an integer: ");
+		int total = 0;
 		
-		println("This program gets any number and displays the sum of odd integers");
-		int N = readInt ("Give me a number;)  "); //the ;) inside the parens is to look as if someone is blinking. XD
-		
-		/*Though for this program these "test" and "result" values may 
-		 * seem unnecessary but for pedagogical purposes I put it here. 
-		 * So it can be clear these are values that could be repeated 
-		 * throughout an entire program*/
-		int test = N*2;
-		int result = N*N;
-		
-		for (int i = ODD; i <= test; i+=2) {
-			println(i);
+		for (int i = 1; i <= n * 2; i +=2){
+			int add = i;
+			total += add;
 		}
-		
-		println("Adding these numbers you have " + result);
-		
+		println(total);
 	}
 
 }
